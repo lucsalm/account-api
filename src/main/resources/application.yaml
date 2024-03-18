@@ -1,0 +1,19 @@
+server:
+  port: 8080
+db:
+  host: 127.0.0.1
+spring:
+  datasource:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://${db.host}:5432/rinha
+    username: admin
+    password: 123
+  jackson:
+    deserialization:
+      ACCEPT_FLOAT_AS_INT: false
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+
