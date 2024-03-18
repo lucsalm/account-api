@@ -15,6 +15,31 @@ This project is my implementation of the [Backend Rumble](https://github.com/zan
 ![Postgres](https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white)
 
+## Architecture
+
+```mermaid
+flowchart TD
+    G(Stress Test - Gatling) -.-> LB(Load Balancer / porta 9999)
+    subgraph Sua Aplicação
+        LB -.-> API1(API - instância 01)
+        LB -.-> API2(API - instância 02)
+        API1 -.-> Db[(Database)]
+        API2 -.-> Db[(Database)]
+    end
+```
+
+## Initial Data
+
+### Clients
+
+| id | limit | initial balance
+| - | - | -
+| 1 | 100000 | 0
+| 2 | 80000 | 0
+| 3 | 1000000 | 0
+| 4 | 10000000 | 0
+| 5 | 500000 | 0
+
 ## How to Use
 
 1. Make sure Docker is installed on your machine.
