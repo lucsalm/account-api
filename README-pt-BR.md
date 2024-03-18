@@ -19,7 +19,7 @@ Este projeto é minha implementação do desafio [Backend Rumble](https://github
 
 ```mermaid
 flowchart TD
-    G(User) -.-> LB(Balanceador de Carga)
+    G(Usuário) -.-> LB(Balanceador de Carga)
     subgraph Arquitetura
         LB -.-> API1(Account API - Instância 01)
         LB -.-> API2(Account API - Instância 02)
