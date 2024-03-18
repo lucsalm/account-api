@@ -19,12 +19,12 @@ Este projeto é minha implementação do desafio [Backend Rumble](https://github
 
 ```mermaid
 flowchart TD
-    G(Stress Test - Gatling) -.-> LB(Load Balancer / porta 9999)
-    subgraph Sua Aplicação
-        LB -.-> API1(API - instância 01)
-        LB -.-> API2(API - instância 02)
-        API1 -.-> Db[(Database)]
-        API2 -.-> Db[(Database)]
+    G(User) -.-> LB(Balanceador de Carga)
+    subgraph Arquitetura
+        LB -.-> API1(Account API - Instância 01)
+        LB -.-> API2(Account API - Instância 02)
+        API1 -.-> Db[(Banco de Dados)]
+        API2 -.-> Db[(Banco de Dados)]
     end
 ```
 

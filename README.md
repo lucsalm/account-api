@@ -19,10 +19,10 @@ This project is my implementation of the [Backend Rumble](https://github.com/zan
 
 ```mermaid
 flowchart TD
-    G(Stress Test - Gatling) -.-> LB(Load Balancer / porta 9999)
-    subgraph Sua Aplicação
-        LB -.-> API1(API - instância 01)
-        LB -.-> API2(API - instância 02)
+    G(User) -.-> LB(Load Balancer)
+    subgraph Architecture
+        LB -.-> API1(Account API - Instance 01)
+        LB -.-> API2(Account API - Instance 02)
         API1 -.-> Db[(Database)]
         API2 -.-> Db[(Database)]
     end
