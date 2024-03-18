@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.project</groupId>
     <artifactId>conta</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <name>conta</name>
     <description>Projeto Rinha de Backend</description>
     <properties>
