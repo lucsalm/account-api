@@ -4,7 +4,7 @@ Este documento está disponível em [Inglês](https://github.com/lucsalm/account
 
 ## Visão geral
 
-Este projeto é minha implementação do desafio [Backend Rumble](https://github.com/zanfranceschi/rinha-de-backend-2024-q1). Em essência, o desafio consiste na criação de uma API capaz de realizar operações transacionais de crédito e débito na conta de um cliente, além de permitir a consulta de extrato. O tema central do desafio é o controle de concorrência, por esse motivo, a implementação explora conceitos [ACID](https://www.ibm.com/docs/pt-br/cics-tx/11.1?topic=processing-acid-properties-transactions), fazendo uso de ferramentas de controle do Spring Boot como [Transactional](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction) e [Lock](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#locking).
+Este projeto é minha implementação do desafio [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1). Em essência, o desafio consiste na criação de uma API capaz de realizar operações transacionais de crédito e débito na conta de um cliente, além de permitir a consulta de extrato. O tema central do desafio é o controle de concorrência, por esse motivo, a implementação explora conceitos [ACID](https://www.ibm.com/docs/pt-br/cics-tx/11.1?topic=processing-acid-properties-transactions), fazendo uso de ferramentas de controle do Spring Boot como [Transactional](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction) e [Lock](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#locking).
 
 ## Tecnologias
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
