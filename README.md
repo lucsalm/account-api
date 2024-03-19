@@ -2,7 +2,7 @@
 
 This document is originally in [English](https://github.com/lucsalm/account-api/blob/main/README.md), but it's also translated in [Portuguese](https://github.com/lucsalm/account-api/blob/main/README-pt-BR.md).
 
-## Overview:
+## Overview
 
 This project is my implementation of the [Backend Rumble](https://github.com/zanfranceschi/rinha-de-backend-2024-q1) challenge. In essence, the challenge consists of creating an API capable of performing credit and debit transactional operations on a client's account, as well as enabling statement inquiry. The central theme of the challenge is concurrency control, for this reason, the implementation explores [ACID](https://www.ibm.com/docs/en/cics-tx/11.1?topic=processing-acid-properties-transactions) concepts, making use of Spring Boot control tools such as [Transactional](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction) and [Lock](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#locking).
 
