@@ -1,6 +1,6 @@
 # Account API
 
-This document is originally in [English](https://github.com/lucsalm/account-api/blob/main/README.md), but it's also translated in [Portuguese](https://github.com/lucsalm/account-api/blob/main/README-pt-BR.md).
+This document is available in [English](https://github.com/lucsalm/account-api/blob/main/README.md), but it's also available in [Portuguese](https://github.com/lucsalm/account-api/blob/main/README-pt-BR.md).
 
 ## Overview
 
