@@ -56,7 +56,7 @@ flowchart TD
         docker-compose up
         ```
 
-5. After the containers are built and the application is started, access `http://localhost:9999/swagger-ui/index.html` to view its documentation. You should see the following screen:![Dashboard de Otimização de Portfólio](https://raw.githubusercontent.com/lucsalm/account-api/main/swagger-screenshot.png)
+5. After the containers are built and the application is started, access [Swagger](http://localhost:9999/swagger-ui/index.html) to view its documentation. You should see the following screen:![Dashboard de Otimização de Portfólio](https://raw.githubusercontent.com/lucsalm/account-api/main/swagger-screenshot.png)
 
 
 **Notes:**
