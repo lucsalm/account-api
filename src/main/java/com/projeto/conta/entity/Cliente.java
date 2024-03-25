@@ -31,22 +31,6 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Integer getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(Integer saldo) {
-        this.saldo = saldo;
-    }
-
-    public void setLimite(Integer limite) {
-        this.limite = limite;
-    }
-
-    public Integer getLimite() {
-        return limite;
-    }
-
     public void executaTransacao(Transacao transacao) {
         switch (transacao.getTipo()) {
             case Tipo.CREDITO -> executaCredito(transacao.getValor());
@@ -72,4 +56,21 @@ public class Cliente {
     public void setTransacoes(List<Transacao> transacoes) {
         this.transacoes = transacoes;
     }
+
+    public Integer getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Integer saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setLimite(Integer limite) {
+        this.limite = limite;
+    }
+
+    public Integer getLimite() {
+        return limite;
+    }
+
 }
