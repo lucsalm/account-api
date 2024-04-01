@@ -4,7 +4,7 @@ This document is available in [English](https://github.com/lucsalm/account-api/b
 
 ## Overview
 
-This project is my implementation of the [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1) challenge. In essence, the challenge consists of creating an API capable of performing credit and debit transactional operations on a client's account, as well as enabling statement inquiry. The central theme of the challenge is concurrency control, for this reason, the implementation explores [ACID](https://www.ibm.com/docs/en/cics-tx/11.1?topic=processing-acid-properties-transactions) concepts, making use of Spring Boot control tools such as [Transactional](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction) and [Lock](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#locking).
+This project is my implementation of the [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1) challenge. In essence, the challenge consists of creating an API capable of performing credit and debit transactional operations on a customer's account, as well as enabling statement inquiry. The central theme of the challenge is concurrency control, for this reason, the implementation explores [ACID](https://www.ibm.com/docs/en/cics-tx/11.1?topic=processing-acid-properties-transactions) concepts, making use of Spring Boot control tools such as [Transactional](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction) and [Lock](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#locking).
 
 ## Stack
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -30,7 +30,7 @@ flowchart TD
 
 ## Initial Data
 
-### Clients
+### Customers
 
 | id | limit    | initial balance |
 |----|----------|-----------------|
