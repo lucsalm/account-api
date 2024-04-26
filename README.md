@@ -17,7 +17,7 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 
 ## Architecture
 
-![Architecture](https://raw.githubusercontent.com/lucsalm/account-api/main/conta-arquitetura.png)
+![Architecture](https://raw.githubusercontent.com/lucsalm/account-api/main/arquitetura.png)
 
 ## Initial Data
 
