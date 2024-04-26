@@ -17,17 +17,7 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
 
 ## Arquitetura
 
-```mermaid
-flowchart TD
-    G(Usuário) -.-> LB(Balanceador de Carga)
-    subgraph Arquitetura
-        LB -.-> API1(Account API - Instância 01)
-        LB -.-> API2(Account API - Instância 02)
-        API1 -.-> Db[(Banco de Dados)]
-        API2 -.-> Db[(Banco de Dados)]
-    end
-```
-
+![Arquitetura](https://raw.githubusercontent.com/lucsalm/account-api/main/conta-arquitetura.png)
 
 ## Dados Iniciais
 

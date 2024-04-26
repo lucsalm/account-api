@@ -17,16 +17,7 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    G(User) -.-> LB(Load Balancer)
-    subgraph Architecture
-        LB -.-> API1(Account API - Instance 01)
-        LB -.-> API2(Account API - Instance 02)
-        API1 -.-> Db[(Database)]
-        API2 -.-> Db[(Database)]
-    end
-```
+![Architecture](https://raw.githubusercontent.com/lucsalm/account-api/main/conta-arquitetura.png)
 
 ## Initial Data
 
