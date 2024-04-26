@@ -17,7 +17,7 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
 
 ## Arquitetura
 
-![Arquitetura](https://raw.githubusercontent.com/lucsalm/account-api/main/arquitetura.png)
+![Arquitetura](https://github.com/lucsalm/account-api/blob/main/arquitetura.png)
 
 ## Dados Iniciais
 
