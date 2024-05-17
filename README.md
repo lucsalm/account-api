@@ -52,5 +52,4 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
 
 
 **Observações:**
-- Certifique-se de que as portas `9999`, `8081`, `8082` e `5432` não estão sendo utilizadas por outra aplicação em seu sistema para evitar conflitos. Se necessário, você pode modificar o mapeamento de porta no arquivo `docker-compose.yml`.
-- O hostname exibido na documentação `api01` ou `api02` refere-se aos hostnames dos containers, portanto, ao fazer requisições para a API deve-se considerar o hostname `localhost` e a porta `9999`.
+- Certifique-se de que as portas `9999`, `8081`, `8082` e `5432` não estão sendo utilizadas por outra aplicação em seu sistema para evitar conflitos. Se necessário, você pode modificar o mapeamento de porta no arquivo [docker-compose.yaml](docker-compose.yaml).

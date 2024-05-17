@@ -51,5 +51,4 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 
 
 **Notes:**
-- Ensure that ports `9999`, `8081`, `8082`, and `5432` are not being used by another application on your system to avoid conflicts. If necessary, you can modify the port mapping in the `docker-compose.yml` file.
-- The hostname displayed in the documentation `api01` or `api02` refers to the container hostnames, therefore, when making requests to the API, the hostname `localhost` and port `9999` should be considered.
+- Ensure that ports `9999`, `8081`, `8082`, and `5432` are not being used by another application on your system to avoid conflicts. If necessary, you can modify the port mapping in the [docker-compose.yaml](docker-compose.yaml) file.
