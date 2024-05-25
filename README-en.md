@@ -10,7 +10,6 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=Spring-Boot&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D.svg?style=for-the-badge&logo=Swagger&logoColor=black)
-![Junit](https://img.shields.io/badge/JUnit5-25A162.svg?style=for-the-badge&logo=JUnit5&logoColor=white)
 ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Postgres](https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white)
@@ -47,7 +46,7 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
         docker-compose up
         ```
 
-5. After the containers are built and the application is started, access [Swagger](http://localhost:9999/swagger-ui/index.html) to view its documentation. You should see the following screen:![Dashboard de Otimização de Portfólio](swagger-screenshot.png)
+5. After the containers are built and the application is started, access [Swagger](http://localhost:8080/swagger-ui/index.html) to view its documentation. You should see the following screen:![Dashboard de Otimização de Portfólio](swagger-screenshot.png)
 
 
 **Notes:**

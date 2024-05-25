@@ -1,15 +1,18 @@
 package com.projeto.conta.entity;
 
-import com.projeto.conta.constants.Tipo;
-import com.projeto.conta.exception.UnprocessableEntityException;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import java.util.List;
 
-
+@Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "cliente")
 @SequenceGenerator(name = "cliente_seq", sequenceName = "seq_cliente_id", allocationSize = 1)
 public class Cliente {
@@ -28,49 +31,22 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Transacao> transacoes;
 
-    public Cliente() {
-    }
 
-    public void executaTransacao(Transacao transacao) {
-        switch (transacao.getTipo()) {
-            case Tipo.CREDITO -> executaCredito(transacao.getValor());
-            case Tipo.DEBITO -> executaDebito(transacao.getValor());
+    public void addTransacao(final Transacao transacao) {
+        if (!transacoes.isEmpty()) {
+            transacoes.add(transacao);
+        } else {
+            transacoes = List.of(transacao);
         }
-        transacoes.add(transacao);
     }
 
-    private void executaDebito(Integer debito) {
-        if (!temSaldoSuficiente(debito))
-            throw new UnprocessableEntityException();
-        this.saldo -= debito;
+    public void debitar(Integer valor) {
+        saldo -= valor;
     }
 
-    private void executaCredito(Integer valor) {
-        this.saldo += valor;
+    public void creditar(Integer valor) {
+        saldo += valor;
     }
 
-    private boolean temSaldoSuficiente(Integer debito) {
-        return debito <= this.saldo + this.limite;
-    }
-
-    public void setTransacoes(List<Transacao> transacoes) {
-        this.transacoes = transacoes;
-    }
-
-    public Integer getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(Integer saldo) {
-        this.saldo = saldo;
-    }
-
-    public void setLimite(Integer limite) {
-        this.limite = limite;
-    }
-
-    public Integer getLimite() {
-        return limite;
-    }
 
 }

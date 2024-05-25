@@ -1,10 +1,18 @@
 package com.projeto.conta.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "transacao")
 @SequenceGenerator(name = "transacao_seq", sequenceName = "seq_transacao_id")
 public class Transacao {
@@ -19,58 +27,12 @@ public class Transacao {
 
     private String descricao;
 
+    @Builder.Default
     @Column(name = "realizada_em")
-    private LocalDateTime realizadaEm;
+    private LocalDateTime realizadaEm = LocalDateTime.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_cliente", referencedColumnName = "id")
     private Cliente cliente;
 
-    public Transacao() {
-    }
-
-    public Transacao(Integer valor, String tipo, String descricao, Cliente cliente) {
-        this.valor = valor;
-        this.tipo = tipo;
-        this.descricao = descricao;
-        this.realizadaEm = LocalDateTime.now();
-        this.cliente = cliente;
-    }
-
-    public Integer getValor() {
-        return valor;
-    }
-
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public LocalDateTime getRealizadaEm() {
-        return realizadaEm;
-    }
-
-    public void setValor(Integer valor) {
-        this.valor = valor;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public void setRealizadaEm(LocalDateTime realizadaEm) {
-        this.realizadaEm = realizadaEm;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
 }

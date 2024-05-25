@@ -13,7 +13,8 @@ import com.projeto.conta.mapper.ClienteMapper;
 import com.projeto.conta.mapper.TransacaoMapper;
 import com.projeto.conta.repository.ClienteRepository;
 import com.projeto.conta.repository.TransacaoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.projeto.conta.strategy.factory.TransferenciaFactory;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Limit;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
@@ -24,17 +25,14 @@ import java.util.List;
 
 
 @Service
+@RequiredArgsConstructor
 public class ContaService {
 
-    @Autowired
-    private ClienteRepository clienteRepository;
-    @Autowired
-    private TransacaoRepository transacaoRepository;
-    @Autowired
-    private ClienteMapper clienteMapper;
-
-    @Autowired
-    private TransacaoMapper transacaoMapper;
+    private final ClienteRepository clienteRepository;
+    private final TransacaoRepository transacaoRepository;
+    private final ClienteMapper clienteMapper;
+    private final TransacaoMapper transacaoMapper;
+    private final TransferenciaFactory transferenciaFactory;
 
     @Transactional
     @Retryable(noRetryFor = {HttpStatusException.class}, backoff = @Backoff(delay = 100, maxDelay = 1000))
@@ -43,7 +41,8 @@ public class ContaService {
                 .orElseThrow(NotFoundException::new);
 
         final Transacao transacao = transacaoMapper.transacaoRequestDTOtoTransacao(transacaoRequest, cliente);
-        cliente.executaTransacao(transacao);
+        transferenciaFactory.buscarStrategy(transacao.getTipo())
+                .executaTransacao(cliente, transacao);
 
         return clienteMapper.clienteToClienteResponseDTO(cliente);
     }

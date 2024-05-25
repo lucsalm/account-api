@@ -1,9 +1,9 @@
 package com.projeto.conta.mapper;
 
-import com.projeto.conta.dto.response.extrato.SaldoDTO;
-import com.projeto.conta.dto.response.extrato.TransacaoDTO;
 import com.projeto.conta.dto.response.cliente.ClienteResponseDTO;
 import com.projeto.conta.dto.response.extrato.ExtratoResponseDTO;
+import com.projeto.conta.dto.response.extrato.SaldoDTO;
+import com.projeto.conta.dto.response.extrato.TransacaoDTO;
 import com.projeto.conta.entity.Cliente;
 import org.springframework.stereotype.Component;
 

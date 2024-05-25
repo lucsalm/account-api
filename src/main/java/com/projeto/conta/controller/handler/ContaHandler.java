@@ -1,8 +1,8 @@
 package com.projeto.conta.controller.handler;
 
+import com.projeto.conta.dto.response.error.ErrorResponseDTO;
 import com.projeto.conta.exception.NotFoundException;
 import com.projeto.conta.exception.UnprocessableEntityException;
-import com.projeto.conta.dto.response.error.ErrorResponseDTO;
 import jakarta.validation.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageConversionException;
@@ -32,7 +32,7 @@ public class ContaHandler {
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
-    public ErrorResponseDTO handlerAnyOtherException(final Exception exception) throws Exception {
+    public ErrorResponseDTO handlerAnyOtherException(final Exception exception) {
         return new ErrorResponseDTO(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
