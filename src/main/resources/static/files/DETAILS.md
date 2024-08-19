@@ -1,17 +1,14 @@
-# Account API
-
-Este documento está disponível em [Inglês](README-en.md), porém também está disponível em [Português](README.md).
+Este documento está disponível em [Inglês](../files/DETAILS-EN.md), porém também está disponível em [Português](../files/DETAILS.md).
 
 ## Visão geral
 
-Este projeto é minha implementação do desafio [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1). Em essência, o desafio consiste na criação de uma API capaz de realizar operações transacionais de crédito e débito na conta de um cliente, além de permitir a consulta de extrato. O tema central do desafio é o controle de concorrência, por esse motivo, a implementação explora conceitos [ACID](https://www.ibm.com/docs/pt-br/cics-tx/11.1?topic=processing-acid-properties-transactions), fazendo uso de ferramentas de controle do Spring Boot como [Transactional](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html) e 
+Este projeto é minha implementação do desafio [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1). Em essência, o desafio consiste na criação de uma API capaz de realizar operações transacionais de crédito e débito na conta de um cliente, além de permitir a consulta de extrato. O tema central do desafio é o controle de concorrência, por esse motivo, a implementação explora conceitos [ACID](https://www.ibm.com/docs/pt-br/cics-tx/11.1?topic=processing-acid-properties-transactions), fazendo uso de ferramentas de controle do Spring Boot como [Transactional](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html) e
 [Lock](https://docs.spring.io/spring-data/jpa/reference/jpa/locking.html).
 
 ## Detalhes
 
-<details open>
+<details >
       <summary><b>Tecnologias</b></summary>
-
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=Spring-Boot&logoColor=white)
@@ -23,30 +20,30 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
 </details>
 
 
-<details open>
+<details >
       <summary><b>Arquitetura</b></summary>
 
-![Arquitetura](src/main/resources/static/img/arquitetura.png)
+![Arquitetura](../img/arquitetura.png)
 </details>
 
 
 
-<details open>
+<details>
       <summary><b>Dados Iniciais</b></summary>
 
- **Clientes**
+**Clientes**
 
- | id | limite   | saldo inicial |
+| id | limite   | saldo inicial |
  |----|----------|---------------|
- | 1  | 100000   | 0             |
- | 2  | 80000    | 0             |
- | 3  | 1000000  | 0             |
- | 4  | 10000000 | 0             |
- | 5  | 500000   | 0             |
+| 1  | 100000   | 0             |
+| 2  | 80000    | 0             |
+| 3  | 1000000  | 0             |
+| 4  | 10000000 | 0             |
+| 5  | 500000   | 0             |
 
 </details>
 
-<details open>
+<details>
       <summary><b>Como Usar</b></summary>
 
 1. Certifique-se de que o Docker esteja instalado em sua máquina.
@@ -63,7 +60,7 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
         docker-compose up
         ```
 
-5. Após a construção dos contêineres e a inicialização da aplicação, acesse [Scallar](http://localhost:8080/scallar.html) para visualizar sua documentação. Você deverá ver a seguinte tela
+5. Após a construção dos contêineres e a inicialização da aplicação, acesse [Scallar](http://localhost:8080/scallar.html) para visualizar sua documentação. Você deverá ver a seguinte tela: ![account-api](../img/scallar-screen.png)
 
 
 **Observações:**

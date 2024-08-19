@@ -1,14 +1,13 @@
-# Account API
-
-This document is available in [English](README-en.md), but it's also available in [Portuguese](README.md).
+This document is available in [English](DETAILS-EN.md), but it's also available in [Portuguese](DETAILS.md).
 
 ## Overview
 
 This project is my implementation of the [Rinha de Backend](https://github.com/zanfranceschi/rinha-de-backend-2024-q1) challenge. In essence, the challenge consists of creating an API capable of performing credit and debit transactional operations on a customer's account, as well as enabling statement inquiry. The central theme of the challenge is concurrency control, for this reason, the implementation explores [ACID](https://www.ibm.com/docs/en/cics-tx/11.1?topic=processing-acid-properties-transactions) concepts, making use of Spring Boot control tools such as [Transactional](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html) and [Lock](https://docs.spring.io/spring-data/jpa/reference/jpa/locking.html).
 
+
 ## Details
 
-<details open>
+<details >
       <summary><b>Stack</b></summary>
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -21,15 +20,15 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 </details>
 
 
-<details open>
+<details >
       <summary><b>Architecture</b></summary>
 
-![Arquitetura](src/main/resources/static/img/arquitetura.png)
+![Arquitetura](../img/arquitetura.png)
 </details>
 
 
 
-<details open>
+<details>
       <summary><b>Initial Data</b></summary>
 
 **Customers**
@@ -45,7 +44,7 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
 
 </details>
 
-<details open>
+<details>
       <summary><b>How to Use</b></summary>
 
 1. Make sure Docker is installed on your machine.
@@ -62,7 +61,7 @@ This project is my implementation of the [Rinha de Backend](https://github.com/z
        docker-compose up
        ```
 
-5. After the containers are built and the application is started, access [Scallar](http://localhost:8080/scallar.html) to view its documentation. You should see the following screen:![account-api](scallar-screen.png)
+5. After the containers are built and the application is started, access [Scallar](http://localhost:8080/scallar.html) to view its documentation. You should see the following screen:![account-api](../img/scallar-screen.png)
 
 
 **Notes:**

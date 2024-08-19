@@ -50,7 +50,7 @@ public class ContaController {
         log.type(REQUEST)
                 .addCampo("idCliente", clienteId)
                 .entity(transacao)
-                .log(Level.INFO);
+                .print(Level.INFO);
 
         ClienteResponseDTO responseDTO = service.realizarTransacao(clienteId, transacao);
         HttpStatus status = HttpStatus.OK;
@@ -58,7 +58,7 @@ public class ContaController {
         log.type(RESPONSE)
                 .entity(responseDTO)
                 .status(status)
-                .log(Level.INFO);
+                .print();
 
         return ResponseEntity.status(status).body(responseDTO);
     }
@@ -79,7 +79,7 @@ public class ContaController {
 
         log.type(REQUEST)
                 .addCampo("idCliente", clienteId)
-                .log(Level.INFO);
+                .print();
 
         ExtratoResponseDTO responseDTO = service.consultaExtrato(clienteId);
         HttpStatus status = HttpStatus.OK;
@@ -87,7 +87,7 @@ public class ContaController {
         log.type(RESPONSE)
                 .entity(responseDTO)
                 .status(status)
-                .log(Level.INFO);
+                .print(Level.INFO);
 
         return responseDTO;
     }
