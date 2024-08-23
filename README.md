@@ -24,7 +24,7 @@ Este projeto é minha implementação do desafio [Rinha de Backend](https://gith
 
 
 <details open>
-      <summary><b>Arquitetura</b></summary>
+      <summary><b>Arquitetura</b></summary> "
 
 ![Arquitetura](src/main/resources/static/img/arquitetura.png)
 </details>

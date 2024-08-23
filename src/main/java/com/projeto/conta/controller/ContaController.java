@@ -27,7 +27,7 @@ import static com.projeto.conta.logs.enums.TypeEnum.RESPONSE;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/clientes")
-@Tag(name = "ContaController", description = "Operações relacionadas a conta de um cliente")
+@Tag(name = "Conta Controller", description = "Operações relacionadas a conta de um cliente")
 public class ContaController {
 
     private final ContaService service;
